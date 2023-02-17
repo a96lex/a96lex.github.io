@@ -1,0 +1,52 @@
+/* https://lospec.com/palette-list/cool-sweater */
+:root {
+	--background: #fafafa;
+	--body: #10081a;
+	--primary: #78a7f5;
+	--secondary: #fcd19b;
+}
+/* :root {
+	--background: #10081a;
+	--body: #fafafa;
+	--primary: #78a7f5;
+	--secondary: #fcd19b;
+} */
+
+body {
+	margin: 0;
+	background: var(--background);
+	color: var(--body);
+	font-family: Lora, serif;
+}
+
+main {
+	padding: 1rem;
+	margin: 2rem auto;
+	max-width: 60rem;
+}
+
+
+.underlined-a {
+	color: unset;
+	text-decoration: none;
+	position: relative;
+	transition: all 0.3s ease-in-out;
+
+	&.active {
+		text-shadow: 0.3px 0px 0 var(--background), -0.3px 0px 0 var(--background);
+	}
+	&:after {
+		background: var(--secondary);
+		position: absolute;
+		width: 0;
+		height: 2px;
+		bottom: 0;
+		left: 0;
+		content: "";
+		transition: all 0.2s ease-in-out;
+	}
+
+	&:hover:after {
+		width: 100%;
+	}
+}
