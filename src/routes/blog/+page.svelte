@@ -1,8 +1,4 @@
 <script lang="ts">
-	import root from "$lib/images/sudo.jpg";
-
-	console.log({ root });
-
 	export let data: { posts: Array<any> };
 </script>
 
@@ -14,7 +10,6 @@
 		<div>{post.summary}</div>
 		<span>{post.date}</span>
 	</a>
-	<!-- <img src={root} alt="0" /> -->
 {/each}
 
 <style lang="scss">
