@@ -13,3 +13,31 @@
 	<p>Published: {date}</p>
 	<Content />
 </article>
+
+<style lang="scss">
+	@keyframes move {
+		0%,
+		100% {
+			transform: translateX(0px);
+		}
+
+		50% {
+			transform: translateX(-5px);
+		}
+	}
+	a {
+		&:before {
+			content: "<";
+			display: inline-block;
+			margin-right: 0.5em;
+			transition: all 0.8s;
+			transform: translateX(0px);
+			animation: move 1s ease-in-out paused infinite normal forwards;
+		}
+
+		&:hover::before {
+			animation-play-state: running;
+			// transform: translateX(-10px);
+		}
+	}
+</style>
