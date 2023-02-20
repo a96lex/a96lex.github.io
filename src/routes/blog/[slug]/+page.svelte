@@ -1,6 +1,6 @@
 <script lang="ts">
+	import CopyCodeInjector from "$lib/components/CopyCodeInjector.svelte";
 	export let data;
-	console.log(data);
 
 	const { title, date } = data.meta;
 	const Content = data.PostContent;
@@ -11,7 +11,9 @@
 <article>
 	<h1>{title}</h1>
 	<p>Published: {date}</p>
-	<Content />
+	<CopyCodeInjector>
+		<Content />
+	</CopyCodeInjector>
 </article>
 
 <style lang="scss">
