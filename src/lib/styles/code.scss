@@ -1,10 +1,10 @@
 // https://lospec.com/palette-list/warm-breeze-on-sunny-days
 :root {
-	--code-copy: #f9de8b;
+	--code-copy: var(--secondary);
 	--code-property: #e0af8f;
 	--code-default: #f68f8b;
 	--code-bg: var(--body);
-	--code-keyword: #f1dfc6;
+	--code-keyword: #6183af;
 	--code-regex: #fed0a2;
 	--code-function: #eb7ea2;
 	--code-comment: #adce93;
