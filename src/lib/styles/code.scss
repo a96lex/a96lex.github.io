@@ -1,0 +1,111 @@
+pre[class*="language-"] {
+	display: inline-block;
+	width: calc(100% - 2em);
+	position: relative;
+
+	code {
+		padding: 1em;
+		width: 100%;
+		background-color: #2f2338;
+		border-radius: 0.3em;
+		display: inline-block;
+		color: #ad5845;
+	}
+
+	.copy {
+		cursor: pointer;
+		display: inline-block;
+		position: absolute;
+		top: 0.5em;
+		right: -1.5em;
+		color: #b5f5ec;
+		background-color: transparent;
+		border: 1px solid currentColor;
+		padding: 0.3em 0.8em;
+		border-radius: 0.3em;
+		transition: all 0.1s ease-in-out;
+
+		&:hover {
+			background-color: #b5f5ec;
+			color: #2f2338;
+		}
+	}
+
+	.token {
+		&.comment,
+		&.prolog,
+		&.doctype,
+		&.cdata {
+			color: #574175;
+		}
+
+		&.parameter {
+			color: #636ab8;
+		}
+
+		&.punctuation {
+			color: #5bace3;
+		}
+
+		&.namespace {
+			opacity: 0.8;
+		}
+
+		&.property,
+		&.tag,
+		&.constant,
+		&.symbol,
+		&.deleted {
+			color: #b5f5ec;
+		}
+
+		&.boolean,
+		&.number {
+			color: #f5e5bf;
+		}
+
+		&.selector,
+		&.attr-name,
+		&.string,
+		&.char,
+		&.builtin,
+		&.inserted {
+			color: #e8ad80;
+		}
+
+		&.operator,
+		&.entity,
+		&.url,
+		&.variable {
+			color: #ff80bf;
+		}
+
+		&.atrule,
+		&.attr-value,
+		&.function,
+		&.class-name {
+			color: #f7ffed;
+		}
+
+		&.keyword {
+			color: #cf784c;
+		}
+
+		&.regex,
+		&.important {
+			color: #73383e;
+		}
+
+		&.important,
+		&.bold {
+			font-weight: bold;
+		}
+		&.italic {
+			font-style: italic;
+		}
+
+		&.entity {
+			cursor: help;
+		}
+	}
+}
