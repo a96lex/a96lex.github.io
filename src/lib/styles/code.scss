@@ -1,3 +1,20 @@
+// https://lospec.com/palette-list/warm-breeze-on-sunny-days
+:root {
+	--code-copy: #f9de8b;
+	--code-property: #e0af8f;
+	--code-default: #f68f8b;
+	--code-bg: var(--body);
+	--code-keyword: #f1dfc6;
+	--code-regex: #fed0a2;
+	--code-function: #eb7ea2;
+	--code-comment: #adce93;
+	--code-parameter: #84c48a;
+	--code-bool: #62d8ad;
+	--code-punctuation: #5ec7c4;
+	--code-string: #34a5d2;
+	--code-operator: #466ac0;
+}
+
 pre[class*="language-"] {
 	display: inline-block;
 	width: calc(100% - 2em);
@@ -6,10 +23,10 @@ pre[class*="language-"] {
 	code {
 		padding: 1em;
 		width: 100%;
-		background-color: #2f2338;
+		background-color: var(--code-bg);
 		border-radius: 0.3em;
 		display: inline-block;
-		color: #ad5845;
+		color: var(--code-default);
 	}
 
 	.copy {
@@ -18,18 +35,18 @@ pre[class*="language-"] {
 		position: absolute;
 		top: 0.6em;
 		right: -1.5em;
-		color: #b5f5ec;
+		color: var(--code-copy);
 		background-color: transparent;
 		border: 1px solid currentColor;
 		padding: 0.3em 0.8em;
 		border-radius: 0.3em;
 		transition: all 0.2s ease-in-out;
-		border-color: #b5f5ec;
+		border-color: var(--code-copy);
 
 		&:hover {
-			background-color: #b5f5ec;
-			color: #2f2338;
-			box-shadow: 0px 2px 10px -2px #b5f5ec;
+			background-color: var(--code-copy);
+			color: var(--code-bg);
+			box-shadow: 0px 2px 10px -2px var(--code-copy);
 		}
 	}
 
@@ -38,15 +55,15 @@ pre[class*="language-"] {
 		&.prolog,
 		&.doctype,
 		&.cdata {
-			color: #574175;
+			color: var(--code-comment);
 		}
 
 		&.parameter {
-			color: #636ab8;
+			color: var(--code-parameter);
 		}
 
 		&.punctuation {
-			color: #5bace3;
+			color: var(--code-punctuation);
 		}
 
 		&.namespace {
@@ -58,12 +75,12 @@ pre[class*="language-"] {
 		&.constant,
 		&.symbol,
 		&.deleted {
-			color: #b5f5ec;
+			color: var(--code-default);
 		}
 
 		&.boolean,
 		&.number {
-			color: #f5e5bf;
+			color: var(--code-bool);
 		}
 
 		&.selector,
@@ -72,30 +89,30 @@ pre[class*="language-"] {
 		&.char,
 		&.builtin,
 		&.inserted {
-			color: #e8ad80;
+			color: var(--code-string);
 		}
 
 		&.operator,
 		&.entity,
 		&.url,
 		&.variable {
-			color: #ff80bf;
+			color: var(--code-operator);
 		}
 
 		&.atrule,
 		&.attr-value,
 		&.function,
 		&.class-name {
-			color: #f7ffed;
+			color: var(--code-function);
 		}
 
 		&.keyword {
-			color: #cf784c;
+			color: var(--code-keyword);
 		}
 
 		&.regex,
 		&.important {
-			color: #73383e;
+			color: var(--code-regex);
 		}
 
 		&.important,
