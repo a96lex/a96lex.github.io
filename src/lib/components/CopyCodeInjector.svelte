@@ -49,5 +49,6 @@
 		padding: 0.4em 0.7em;
 		border-radius: 0.4em;
 		z-index: 1;
+		box-shadow: 0px 2px 10px -2px var(--code-copy);
 	}
 </style>
