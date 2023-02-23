@@ -10,23 +10,33 @@
 </script>
 
 <footer>
-	<h1>Alex</h1>
-	<div>
-		<nav>
-			{#each links as link, idx}
-				<a href={link.path} class="underlined-a" class:active={$page.url.pathname == link.path}
-					>{link.text}</a
-				>
-			{/each}
-		</nav>
+	<div class="content">
+		<h1>Alex</h1>
+		<div>
+			<nav>
+				{#each links as link, idx}
+					<a
+						href={link.path}
+						class="underlined-a"
+						class:active={$page.url.pathname == link.path}>{link.text}</a
+					>
+				{/each}
+			</nav>
+		</div>
 	</div>
 </footer>
 
 <style lang="scss">
-	footer {
+	a {
+		margin: 0 0.3em;
+	}
+
+	.content {
+		max-width: 60rem;
+		flex: 1;
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
-		position: absolute;
+		justify-content: space-between;
+		padding: 0 1em;
 	}
 </style>
