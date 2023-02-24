@@ -21,7 +21,7 @@
 	.container {
 		width: 100%;
 		margin: 0em auto 2rem auto;
-		max-width: 60rem;
+		max-width: 45rem;
 	}
 
 	.footer-spacer {
