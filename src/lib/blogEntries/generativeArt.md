@@ -1,7 +1,7 @@
 ---
 title: Generative art investigation - mandalas
 date: "2023-02-24"
-editDate: "2023-03-01"
+editDate: "2023-02-24"
 summary: Investigating current approaches to mandala generation.
 tags: [art, mandalas]
 ---
@@ -11,6 +11,7 @@ tags: [art, mandalas]
     import mandala from "$lib/images/mandala.png"
     import mandalagaba from "$lib/images/mandalagaba.png"
     import silk from "$lib/images/silk.png"
+    import midjourney from "$lib/images/midjourney.png"
 </script>
 
 
@@ -37,7 +38,7 @@ Hence my search begins.
 
 ## Available products
 
-### [mandalagaba](https://www.mandalagaba.com/)
+### [MandalaGaba](https://www.mandalagaba.com/)
 
 As their description reads:
 
@@ -49,7 +50,7 @@ This is a very nice application that speeds up the drawing process by providing 
 
 It surely was a smooth experience, but this is not generative art since I need to manually draw the strokes. 
 
-### [silk](http://weavesilk.com/)
+### [Silk](http://weavesilk.com/)
 
 This time their description is shorter:
 
@@ -63,9 +64,17 @@ By playing around just for a minute or two, I got the following:
 
 The result is a great deal in terms of value/effort. Even though this approach generates visually appealing images in no time, it is not quite what I want.
 
-### [mandalamaker](https://mandalamaker.online/)
+### [Midjourney](https://www.midjourney.com/)
 
-This behaves very similarly to mandalagaba. I found the former to have a better user experience so I consider mandalamaker to be a simpler alternative to it. 
+Generative AI is very popular right now. I have tried with the product that I like the most in terms of results with the following prompt:
+
+> mandala art, white background and black strokes. 6 fold rotational symmetry. The strokes are made with a pen. Many strokes and very small. The strokes never touch each other. Looking from afar, it looks like a flower.
+
+With this prompt, Midjourney generates these:
+
+![Midjourney]({midjourney})
+
+The results are quite impressive, but not exactly what I asked for. Maybe some prompt engineering would take me closer.
 
 ## Conclusion
 
