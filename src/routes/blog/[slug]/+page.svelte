@@ -2,7 +2,8 @@
 	import CopyCodeInjector from "$lib/components/CopyCodeInjector.svelte";
 	export let data;
 
-	const { title, date } = data.meta;
+	const { title, date = "1970-01-01", tags = [], editDate } = data.meta;
+
 	const Content = data.PostContent;
 </script>
 
@@ -10,13 +11,34 @@
 
 <article>
 	<h1>{title}</h1>
-	<p>Published: {date}</p>
+
+	{#each tags as tag}
+		<span class="tag">{tag}</span>
+	{/each}
+
 	<CopyCodeInjector>
 		<Content />
 	</CopyCodeInjector>
+
+	<p class="date">Published on {date}</p>
+	{#if editDate}
+		<p class="date">Edited on {editDate}</p>
+	{/if}
 </article>
 
 <style lang="scss">
+	.date {
+		font-size: smaller;
+		margin: 0;
+	}
+
+	.tag {
+		padding: 0.2em 0.5em;
+		margin: 0 0.2em;
+		background-color: var(--secondary);
+		border-radius: 4px;
+	}
+
 	@keyframes move {
 		0%,
 		100% {
