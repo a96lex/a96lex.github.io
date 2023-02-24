@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="../_app/immutable/assets/_layout-a8fcf288.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_page-b4c690b8.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/generativeArt-7c6e2216.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/start-fce714a9.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index-cdc7fb82.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons-858511ff.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/control-654b50f6.js">
+		<link rel="modulepreload" href="../_app/immutable/components/pages/_layout.svelte-0c8085dd.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores-6004bcda.js">
+		<link rel="modulepreload" href="../_app/immutable/modules/pages/_layout.ts-9cbb603b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout-da46b06b.js">
+		<link rel="modulepreload" href="../_app/immutable/components/pages/blog/_slug_/_page.svelte-70260e36.js">
+		<link rel="modulepreload" href="../_app/immutable/modules/pages/blog/_slug_/_page.ts-04c20fd8.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_page-6d44a545.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index-cbbaa776.js">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+
+
+<header class="svelte-k680b8"><div class="content svelte-k680b8"><h1 class="svelte-k680b8">Alex</h1>
+		<div class="svelte-k680b8"><nav class="svelte-k680b8"><a href="/" class="underlined-a svelte-k680b8">Home</a><a href="/blog" class="underlined-a svelte-k680b8">Blog</a><a href="/about" class="underlined-a svelte-k680b8">About</a><a href="/contact" class="underlined-a svelte-k680b8">Contact</a></nav></div></div>
+</header>
+
+<main><div class="container svelte-pm5cow"><a class="underlined-a svelte-1ezxtcq" href="/blog">Back to Blog</a>
+
+<article><h1>Generative art investigation - mandalas</h1>
+
+	<span class="tag svelte-1ezxtcq">art</span><span class="tag svelte-1ezxtcq">mandalas</span>
+
+	
+<h2>Introduction</h2>
+<p>I have always liked mandalas. I started drawing them on highschool. Throughout university I had developed a nice technique that I kept repeating.</p>
+<p>First, I’d get a square piece of paper, compass and a ruler. I would start my process by finding the central point on the paper. I would later lay out a few circles, using some kind of symmetry, always centred in the middle point of the paper.</p>
+<p>To visualize this, it would look a bit like a Chladni figure, which appears when you draw a bow over a piece of metal whose surface is lightly covered with sand. You can read more in Ernst Chladni’s <a href="https://en.wikipedia.org/wiki/Ernst_Chladni" target="_blank" rel="noreferrer" class="underlined-a svelte-1ojjvwu">wikipedia page
+</a>. </p>
+<p><img alt="chladni_image" src="/_app/immutable/assets/chladni-0e810fca.jpg" class="svelte-5r3sv1"></p>
+<p>I would later fill this skeleton with little pen strokes to produce the final piece. Here is an example of what it would look like:</p>
+<p><img alt="square_mandala" src="/_app/immutable/assets/mandala-7d93bff7.png" class="svelte-5r3sv1"></p>
+<p>I have some other drawings I shared on my <a href="https://www.instagram.com/alexmandalas/" target="_blank" rel="noreferrer" class="underlined-a svelte-1ojjvwu">instagram account
+</a>.</p>
+<p>I love doing those mandalas, and I really appreciate the time it takes to create a single piece (somewhere between 3 and 8 hours of work). However, I am a programmer so I can’t avoid the question: Can this process be automated?</p>
+<p>Hence my search begins. </p>
+<h2>Available products</h2>
+<h3><a href="https://www.mandalagaba.com/" target="_blank" rel="noreferrer" class="underlined-a svelte-1ojjvwu">mandalagaba
+</a></h3>
+<p>As their description reads:</p>
+<blockquote class="svelte-116rl47"><p>MandalaGaba is a free online mandala creation suite for designing, sharing and collaborating on mandalas, drawings, sketches, doodles and works of digital art!</p>
+</blockquote>
+<p>This is a very nice application that speeds up the drawing process by providing a canvas with mirrored strokes. Look what I could do in a couple of minutes:</p>
+<p><img alt="mandalagaba" src="/_app/immutable/assets/mandalagaba-01205f1d.png" class="svelte-5r3sv1"></p>
+<p>It surely was a smooth experience, but this is not generative art since I need to manually draw the strokes. </p>
+<h3><a href="http://weavesilk.com/" target="_blank" rel="noreferrer" class="underlined-a svelte-1ojjvwu">silk
+</a></h3>
+<p>This time their description is shorter:</p>
+<blockquote class="svelte-116rl47"><p>Create beautiful flowing art with Silk. </p>
+</blockquote>
+<p>This application takes a more ‘generative approach’. It provides a canvas with central symmetry as well, but your strokes are randomized, and change over time, meaning that if you keep pressing the same spot, more lines will flow.</p>
+<p>By playing around just for a minute or two, I got the following:</p>
+<p><img alt="silk" src="/_app/immutable/assets/silk-8eec31a0.png" class="svelte-5r3sv1"></p>
+<p>The result is a great deal in terms of value/effort. Even though this approach generates visually appealing images in no time, it is not quite what I want.</p>
+<h3><a href="https://mandalamaker.online/" target="_blank" rel="noreferrer" class="underlined-a svelte-1ojjvwu">mandalamaker
+</a></h3>
+<p>This behaves very similarly to mandalagaba. I found the former to have a better user experience so I consider mandalamaker to be a simpler alternative to it. </p>
+<h2>Conclusion</h2>
+<p>This article is a mere exploration of available tools for mandala generation. I have found that the pure generative approaches don’t look as the ones I usually draw, and the ones that produce similar outputs, are just a drawing helper.</p>
+<p>In order for me to find my desired tool, I need to investigate other approaches and maybe even build my own!</p>
+<h2>Next steps</h2>
+<ul><li>Define my requirements, so I can look better for existing tools.</li>
+<li>Investigate generative techniques<ul><li>Wave function collapse seems like a nice place to start</li></ul></li></ul>
+
+	<p class="date svelte-1ezxtcq">Published on 2023-02-24</p>
+	<p class="date svelte-1ezxtcq">Edited on 2023-03-01</p>
+</article></div></main>
+
+<div class="footer-spacer svelte-pm5cow"></div>
+
+<footer><div class="content svelte-1w0qzdt"><h1>Alex</h1>
+		<div><nav><a href="/" class="underlined-a svelte-1w0qzdt">Home</a><a href="/blog" class="underlined-a svelte-1w0qzdt">Blog</a><a href="/about" class="underlined-a svelte-1w0qzdt">About</a><a href="/contact" class="underlined-a svelte-1w0qzdt">Contact</a></nav></div></div>
+</footer>
+
+
+		<script type="module" data-sveltekit-hydrate="piwmv7">
+			import { start } from "../_app/immutable/start-fce714a9.js";
+
+			start({
+				assets: "",
+				env: {},
+				target: document.querySelector('[data-sveltekit-hydrate="piwmv7"]').parentNode,
+				version: "1677256524734",
+				hydrate: {
+					node_ids: [0, 6],
+					data: [null,null],
+					form: null,
+					error: null
+				}
+			});
+		</script>
+	</div>
+	</body>
+</html>
