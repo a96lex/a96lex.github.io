@@ -27,6 +27,7 @@ pre[class*="language-"] {
 		border-radius: 0.3em;
 		display: inline-block;
 		color: var(--code-default);
+		white-space: break-spaces;
 	}
 
 	.copy {
