@@ -35,5 +35,11 @@
 	"dependencies": {
 		"rehype-autolink-headings": "^6.1.1",
 		"rehype-slug": "^5.1.0"
+	},
+	"pnpm": {
+		"overrides": {
+			"undici@<5.19.1": ">=5.19.1",
+			"undici@>=2.0.0 <5.19.1": ">=5.19.1"
+		}
 	}
 }
