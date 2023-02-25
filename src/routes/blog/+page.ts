@@ -3,7 +3,6 @@ import { error } from "@sveltejs/kit";
 export const load = async () => {
 	try {
 		const allPostFiles = import.meta.glob("../../lib/blogEntries/*.md");
-		console.log(allPostFiles);
 
 		const iterablePostFiles = Object.keys(allPostFiles);
 
@@ -18,10 +17,9 @@ export const load = async () => {
 
 		posts.sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)));
 
-		console.log("before return", posts.length, "alex");
 		return { posts };
 	} catch (err) {
-		console.log(err);
+		console.error(err);
 		throw error(501, "Error getting post list");
 	}
 };
