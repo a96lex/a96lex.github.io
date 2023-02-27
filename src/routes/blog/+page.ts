@@ -1,9 +1,9 @@
 import { error } from "@sveltejs/kit";
 
-export const load = async () => {
+export const load = async ({ url }: { url: URL }) => {
 	try {
+		const tag = url.searchParams.get("tag");
 		const allPostFiles = import.meta.glob("../../lib/blogEntries/*.md");
-
 		const iterablePostFiles = Object.keys(allPostFiles);
 
 		let posts: any[] = [];
@@ -11,6 +11,8 @@ export const load = async () => {
 		for (const postName of iterablePostFiles) {
 			// This calls import(path).
 			const post: any = await allPostFiles[postName]();
+			if (tag && !post.metadata.tags.includes(tag)) continue;
+
 			const slug = postName.split("/").pop()!.split(".").shift();
 			posts.push({ ...post.metadata, slug });
 		}
