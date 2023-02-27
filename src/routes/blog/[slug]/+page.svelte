@@ -13,7 +13,7 @@
 	<h1>{title}</h1>
 
 	{#each tags as tag}
-		<span class="tag">{tag}</span>
+		<a href={`/blog?tag=${tag}`} class="tag">{tag}</a>
 	{/each}
 
 	<CopyCodeInjector>
@@ -49,7 +49,13 @@
 			transform: translateX(-5px);
 		}
 	}
+
 	a {
+		text-decoration: none;
+		color: unset;
+	}
+
+	.underlined-a {
 		&:before {
 			content: "<";
 			display: inline-block;
