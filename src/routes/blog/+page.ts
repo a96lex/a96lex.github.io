@@ -17,7 +17,9 @@ export const load = async ({ url }: { url: URL }) => {
 			posts.push({ ...post.metadata, slug });
 		}
 
-		posts.sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)));
+		posts = posts
+			.sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)))
+			.filter((post) => !post.draft);
 
 		return { posts };
 	} catch (err) {
