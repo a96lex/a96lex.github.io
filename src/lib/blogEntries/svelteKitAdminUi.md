@@ -2,6 +2,7 @@
 title: SvelteKit admin UI
 date: "2023-03-03"
 # editDate: "2023-02-24"
+draft: true
 summary: Crating an admin UI for our API
 tags: [frontend, svelteKit]
 ---
@@ -37,7 +38,7 @@ We want to have the following features:
 - Theming (dark/light mode)
 
 In terms of code quality, we want the following:
-  
+
 - Type safety
 - Linter
 - Code formatter
@@ -56,6 +57,7 @@ pnpm i
 git init && git add -A && git commit -m "Initial commit"
 pnpm dev
 ```
+
 When running the first command, we choose the following:
 
 ```
@@ -77,14 +79,14 @@ create-svelte version 3.1.0
 
 # Routing
 
-Now that everything is running, it is time to decide how is the code going to look like. 
+Now that everything is running, it is time to decide how is the code going to look like.
 
 Svelte uses filesystem-based routing. This means that the structure of our project will determine the URLs that the user will have access to. Any directory under `src/routes` will be converted to a route.
 
 This is very useful for having sub-routes as well, just by nesting a directory into another.
 
 ```
-admin-ui % tree src/routes 
+admin-ui % tree src/routes
 src/routes
 ├── auth
 │   ├── login
@@ -126,9 +128,9 @@ Inside this component, we are going to write something very simple:
 
 ```svelte
 <header>
-    <a href="/head/dashboard">Dashboard</a>
-    <a href="/support">Support</a>
-    <a href="/pricing">Pricing</a>
+	<a href="/head/dashboard">Dashboard</a>
+	<a href="/support">Support</a>
+	<a href="/pricing">Pricing</a>
 </header>
 ```
 
@@ -136,7 +138,7 @@ To use this across all our application, let's import it on our `src/routes/+layo
 
 ```svelte
 <script lang="ts">
-	import Header from '$lib/components/Header.svelte';
+	import Header from "$lib/components/Header.svelte";
 </script>
 
 <Header />
