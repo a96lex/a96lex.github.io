@@ -47,11 +47,6 @@ export const projects: Project[] = [
     tags: ["pygame", "pyodide", "pygbag"],
   },
   {
-    name: "Breakout",
-    description: "Simple implementation of a breakout game",
-    tags: ["pygame"],
-  },
-  {
     name: "Piplook",
     description: "Bird sightning logging app, leveraging Google's Lens API.",
     tags: ["Flask", "React Native"],
