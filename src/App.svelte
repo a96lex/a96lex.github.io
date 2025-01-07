@@ -14,7 +14,7 @@
   </div>
 
   <div
-    class="flex flex-col items-start gap-10 max-w-4xl lg:max-w-6xl mx-auto px-10"
+    class="flex flex-col items-start gap-10 max-w-3xl lg:max-w-4xl mx-auto px-10"
   >
     <Title />
     <About />
