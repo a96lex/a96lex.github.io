@@ -12,4 +12,16 @@
   p {
     @apply text-gray-700 dark:text-gray-300;
   }
+
+  h2 {
+    @apply text-4xl font-bold py-2;
+  }
+
+  p {
+    @apply text-2xl;
+  }
+
+  * {
+    @apply transition-all duration-500;
+  }
 }

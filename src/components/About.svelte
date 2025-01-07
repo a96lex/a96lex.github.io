@@ -1,6 +1,6 @@
 <div>
-  <h2 class="text-4xl font-bold py-2">Who am I</h2>
-  <p class="text-2xl">
+  <h2>Who am I</h2>
+  <p>
     Results-driven Software Engineer with a proven track record of designing and
     delivering scalable solutions for complex technical challenges. Expertise in
     cloud-native development, optimizing machine learning pipelines, and
