@@ -8,13 +8,14 @@
 </script>
 
 <main class="min-h-screen bg-gray-100 dark:bg-gray-800 pb-12">
-  <GradientBg />
-  <div class="flex justify-end items-center p-4 sticky">
+  <div class="flex justify-end items-center p-4 fixed w-full">
     <ThemeToggle />
   </div>
 
+  <GradientBg />
+
   <div
-    class="flex flex-col items-start gap-10 max-w-3xl lg:max-w-4xl mx-auto px-10"
+    class="flex flex-col items-start gap-10 max-w-3xl lg:max-w-4xl mx-auto px-10 thez pt-20"
   >
     <Title />
     <About />
@@ -22,3 +23,9 @@
     <Contact />
   </div>
 </main>
+
+<style>
+  :global(.thez) {
+    z-index: 10;
+  }
+</style>
