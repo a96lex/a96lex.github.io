@@ -31,7 +31,7 @@ export const projects: Project[] = [
   {
     name: "HotReach",
     description:
-      "AI-powered cold message generation system, based on prospects information.",
+      "AI-powered cold message generation system, based on gathered prospect information.",
     tags: ["Serverless", "BeautifulSoup4"],
   },
   {
