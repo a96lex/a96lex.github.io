@@ -9,7 +9,7 @@
   <div class="flex flex-row flex-wrap justify-between">
     {#each projects as project}
       <div
-        class="bg-gray-200 dark:bg-gray-600 mb-4 rounded-lg text-gray-800 dark:text-gray-200 w-full pb-2 alex"
+        class="bg-gray-200 dark:bg-gray-600 mb-4 rounded-lg text-gray-800 dark:text-gray-200 w-full pb-2 lg:w-[calc(50%-0.5em)]"
       >
         <h3
           class="text-lg font-bold bg-gray-300 dark:bg-gray-700 rounded-t-lg px-6 py-2"
@@ -29,11 +29,3 @@
     {/each}
   </div>
 </div>
-
-<style>
-  @media screen and (min-width: 1024px) {
-    .alex {
-      width: calc(50% - 0.5em);
-    }
-  }
-</style>
