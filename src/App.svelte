@@ -15,7 +15,7 @@
   <GradientBg />
 
   <div
-    class="flex flex-col items-start gap-10 max-w-3xl lg:max-w-4xl mx-auto px-10 thez pt-20"
+    class="flex flex-col items-start gap-10 max-w-3xl lg:max-w-4xl mx-auto px-10 relative z-10 pt-20"
   >
     <Title />
     <About />
@@ -23,9 +23,3 @@
     <Contact />
   </div>
 </main>
-
-<style>
-  :global(.thez) {
-    z-index: 10;
-  }
-</style>

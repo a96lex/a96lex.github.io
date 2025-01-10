@@ -19,6 +19,6 @@
 </script>
 
 <div
-  class="pointer-events-none fixed inset-0 text-red-400 dark:text-blue-600 opacity-15"
+  class="pointer-events-none fixed inset-0 text-red-400 dark:text-blue-600 opacity-15 z-0"
   style={gradientStyle}
 ></div>

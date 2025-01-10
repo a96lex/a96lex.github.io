@@ -25,9 +25,3 @@
     @apply transition-all duration-500;
   }
 }
-
-.thez {
-  * {
-    z-index: 40;
-  }
-}
