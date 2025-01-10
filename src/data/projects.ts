@@ -3,6 +3,7 @@ interface Project {
   description: String;
   tags: String[];
   url?: String;
+  image?: String;
 }
 
 export const projects: Project[] = [
@@ -21,6 +22,13 @@ export const projects: Project[] = [
     name: "Better",
     description: "Habit tracking app to help users reduce substance abuse.",
     tags: ["Flutter"],
+  },
+  {
+    name: "Slime mold simulator",
+    description:
+      "A web application that simulates the behaviour of slime molds.",
+    tags: ["javascript"],
+    image: "/public/slime-mold.png",
   },
   {
     name: "CoronaTiquets",
