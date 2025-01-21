@@ -24,11 +24,14 @@
   <div class="flex flex-row flex-wrap justify-between">
     {#each projects as project}
       <div
-        class={`transition-all duration-300 mb-4 rounded-lg text-gray-800 dark:text-gray-200 w-full pb-2 lg:w-[calc(50%-0.5em)] relative group`}
+        class={`z-40 transition-all duration-300 mb-4 rounded-lg text-gray-800 dark:text-gray-200 w-full pb-2 lg:w-[calc(50%-0.5em)] relative group`}
       >
         {#if project.image}
           <div
-            class="absolute rounded-lg inset-0 bg-gray-200 dark:bg-gray-800 opacity-10 bg-cover bg-center group-hover:opacity-50"
+            class="absolute rounded-lg inset-0 bg-gray-100 dark:bg-gray-800 opacity-100"
+          ></div>
+          <div
+            class="absolute rounded-lg inset-0 bg-cover bg-center opacity-10 group-hover:opacity-50"
             style={`background-image: url('${project.image}');`}
           ></div>
         {/if}
