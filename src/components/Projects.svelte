@@ -1,5 +1,20 @@
 <script lang="ts">
   import { projects } from "../data/projects.js";
+
+  const getUrlIcon = (url: string) => {
+    if (url.match(/github\.com/)) {
+      return {
+        src: "https://github.githubassets.com/favicons/favicon.svg",
+        invertOnDarkMode: true,
+      };
+    }
+    if (url.match(/devpost\.com/)) {
+      return {
+        src: "https://devpost.com/favicon.ico",
+        invertOnDarkMode: false,
+      };
+    }
+  };
 </script>
 
 <div class="w-full">
@@ -25,6 +40,7 @@
           >
             <span>{project.name}</span>
             {#if project.url}
+              {@const icon = getUrlIcon(project.url)}
               <a
                 class="opacity-10 group-hover:opacity-100"
                 href={project.url}
@@ -32,7 +48,15 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                🔗
+                {#if icon}
+                  <img
+                    src={icon.src}
+                    alt="URL Icon"
+                    class={`h-5 w-5  ${icon.invertOnDarkMode && "dark:invert"}`}
+                  />
+                {:else}
+                  <span>🔗</span>
+                {/if}
               </a>
             {/if}
           </h3>
