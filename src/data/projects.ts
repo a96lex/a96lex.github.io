@@ -1,33 +1,25 @@
 interface Project {
-  name: String;
-  description: String;
-  tags: String[];
-  url?: String;
-  image?: String;
+  name: string;
+  description: string;
+  tags: string[];
+  url?: string;
+  image?: string;
 }
 
 export const projects: Project[] = [
   {
-    name: "Unith.ai",
-    description:
-      "Digital Human platform. User management, real time conversation and video generation.",
-    tags: ["Svelte", "pytorch", "FastApi", "Langchain"],
-  },
-  {
-    name: "Easy Correct",
-    description: "AI-powered exam grading system integrated with moodle.",
-    tags: [" FastAPI", "Filament", "Laravel"],
-  },
-  {
     name: "Better",
     description: "Habit tracking app to help users reduce substance abuse.",
     tags: ["Flutter"],
+    url: "https://github.com/a96lex/better",
+    image: "/public/better.png",
   },
   {
     name: "Slime mold simulator",
     description:
       "A web application that simulates the behaviour of slime molds.",
     tags: ["javascript"],
+    url: "http://scom-physarum-2021.s3-website-eu-west-1.amazonaws.com/",
     image: "/public/slime-mold.png",
   },
   {
@@ -35,12 +27,15 @@ export const projects: Project[] = [
     description:
       "Appointment management app made to keep family business open during the pandemic.",
     tags: ["Angular Native"],
+    url: "https://www.upc.edu/ca/sala-de-premsa/noticies/un-equip-estudiants-de-la-upc-eebe-queda-en-segon-lloca-la-hackovid-per-trobar-solucions-als-reptes-socials-del-confinament",
+    image: "/public/coronatiquets.png",
   },
   {
     name: "HotReach",
     description:
       "AI-powered cold message generation system, based on gathered prospect information.",
     tags: ["Serverless", "BeautifulSoup4"],
+    url: "https://hotreach.io/",
     image: "/public/hotreach.png",
   },
   {
@@ -48,6 +43,8 @@ export const projects: Project[] = [
     description:
       "Client appointment management platform made for a family business.",
     tags: ["fastapi", "react"],
+    url: "https://aras.netlify.app/",
+    image: "/public/aras.png",
   },
   {
     name: "Tank game",
@@ -58,26 +55,34 @@ export const projects: Project[] = [
     image: "/public/tank-game.png",
   },
   {
-    name: "Piplook",
-    description: "Bird sightning logging app, leveraging Google's Lens API.",
-    tags: ["Flask", "React Native"],
+    name: "Rocket game",
+    description:
+      "Physics based Flappy bird-like game. Avoid obstacles and get a high score.",
+    tags: ["pygame"],
+    url: "https://github.com/a96lex/pygame-floating-rocket",
+    image: "/public/rocket.png",
   },
   {
     name: "Loora",
     description:
       "Home safety device to monitore a loved one's activity, using Long Range devices.",
     tags: ["Arduino", "Flask"],
-    image: "/public/loora.png", 
+    url: "https://devpost.com/software/loora",
+    image: "/public/loora.png",
   },
   {
     name: "Dono",
     description:
       "Charitable gift card platform. Worked mainly on data collection.",
     tags: ["BeautifulSoup4"],
+    url: "https://devpost.com/software/dono-4e563v",
+    image: "/public/dono.png",
   },
   {
     name: "Wordle breaker",
     description: "A CLI tool that helps solve the original wodle puzzle.",
     tags: ["python"],
+    url: "https://github.com/a96lex/wordle-breaker/",
+    image: "/public/wordle.png",
   },
 ];
