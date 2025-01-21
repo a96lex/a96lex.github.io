@@ -9,13 +9,7 @@
   <div class="flex flex-row flex-wrap justify-between">
     {#each projects as project}
       <div
-        class={`transition-all duration-300 mb-4 rounded-lg text-gray-800 dark:text-gray-200 w-full pb-2 lg:w-[calc(50%-0.5em)] 
-          ${
-            project.image
-              ? "bg-[linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)),url('/public/slime-mold.png')] dark:bg-[linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('/public/slime-mold.png')]"
-              : "bg-gray-200 dark:bg-gray-600"
-          } 
-          bg-cover bg-center`}
+        class={`transition-all duration-300 mb-4 rounded-lg text-gray-800 dark:text-gray-200 w-full pb-2 lg:w-[calc(50%-0.5em)] relative `}
       >
         <h3
           class={`text-lg font-bold bg-gray-300 dark:bg-gray-700 rounded-t-lg px-6 py-2 ${
@@ -24,8 +18,13 @@
         >
           {project.name}
         </h3>
-        <p class="px-6 mt-3 mb-6">{project.description}</p>
-
+        {#if project.image}
+          <div
+            class="absolute rounded-lg inset-0 bg-gray-200 dark:bg-gray-800 opacity-50 bg-cover bg-center z-20"
+            style={`background-image: url('${project.image}');`}
+          ></div>
+        {/if}
+        <p class="px-6 mt-3 mb-6 z-30">{project.description}</p>
         <div class="px-4 pb-2">
           {#each project.tags as tag}
             <span
