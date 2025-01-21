@@ -9,21 +9,32 @@
   <div class="flex flex-row flex-wrap justify-between">
     {#each projects as project}
       <div
-        class={`transition-all duration-300 mb-4 rounded-lg text-gray-800 dark:text-gray-200 w-full pb-2 lg:w-[calc(50%-0.5em)] relative`}
+        class={`transition-all duration-300 mb-4 rounded-lg text-gray-800 dark:text-gray-200 w-full pb-2 lg:w-[calc(50%-0.5em)] relative group`}
       >
         {#if project.image}
           <div
-            class="absolute rounded-lg inset-0 bg-gray-200 dark:bg-gray-800 opacity-10 bg-cover bg-center pointer-events-none"
+            class="absolute rounded-lg inset-0 bg-gray-200 dark:bg-gray-800 opacity-10 bg-cover bg-center group-hover:opacity-50"
             style={`background-image: url('${project.image}');`}
           ></div>
         {/if}
         <div class="relative">
           <h3
-            class={`text-lg font-bold bg-gray-300 dark:bg-gray-700 rounded-t-lg px-6 py-2 ${
+            class={`text-lg font-bold bg-gray-300 dark:bg-gray-700 rounded-t-lg px-6 py-2 flex justify-between items-center ${
               project.image && "bg-opacity-50 dark:bg-opacity-50"
             } backdrop-blur-sm`}
           >
-            {project.name}
+            <span>{project.name}</span>
+            {#if project.url}
+              <a
+                class="opacity-10 group-hover:opacity-100"
+                href={project.url}
+                aria-label="project url"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                🔗
+              </a>
+            {/if}
           </h3>
           <p class="px-6 mt-3 mb-6">{project.description}</p>
           <div class="px-4 pb-2">
