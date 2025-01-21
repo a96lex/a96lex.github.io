@@ -7,8 +7,10 @@
   import Contact from "./components/Contact.svelte";
 </script>
 
-<main class="min-h-screen bg-gray-100 dark:bg-gray-800 pb-12">
-  <div class="flex justify-end items-center p-4 fixed w-full">
+<main class="min-h-screen bg-gray-100 dark:bg-gray-800 pb-12 relative">
+  <div
+    class="flex justify-end items-center fixed top-0 right-0 w-full z-50 pointer-events-auto"
+  >
     <ThemeToggle />
   </div>
 
