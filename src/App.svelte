@@ -9,7 +9,7 @@
 
 <main class="min-h-screen bg-gray-100 dark:bg-gray-800 pb-12 relative">
   <div
-    class="flex justify-end items-center fixed top-0 right-0 w-full z-50 pointer-events-auto"
+    class="flex justify-end items-center fixed top-0 md:top-4 md:right-4 right-0 w-full z-50 pointer-events-auto"
   >
     <ThemeToggle />
   </div>
