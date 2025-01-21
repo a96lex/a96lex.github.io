@@ -41,6 +41,7 @@ export const projects: Project[] = [
     description:
       "AI-powered cold message generation system, based on gathered prospect information.",
     tags: ["Serverless", "BeautifulSoup4"],
+    image: "/public/hotreach.png",
   },
   {
     name: "Aras",
@@ -53,6 +54,8 @@ export const projects: Project[] = [
     description:
       "Aim and shoot game inspired by diep.io. Made in python and able to be ran in the browser.",
     tags: ["pygame", "pyodide", "pygbag"],
+    url: "https://alex-pf.itch.io/tank-game",
+    image: "/public/tank-game.png",
   },
   {
     name: "Piplook",
@@ -64,6 +67,7 @@ export const projects: Project[] = [
     description:
       "Home safety device to monitore a loved one's activity, using Long Range devices.",
     tags: ["Arduino", "Flask"],
+    image: "/public/loora.png", 
   },
   {
     name: "Dono",
