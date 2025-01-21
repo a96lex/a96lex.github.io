@@ -13,7 +13,7 @@ export const projects: Project[] = [
       "A habit tracking app designed to help users reduce substance abuse by building healthier routines.",
     tags: ["Flutter"],
     url: "https://github.com/a96lex/better",
-    image: "/public/better.png",
+    image: "/better.png",
   },
   {
     name: "Slime mold simulator",
@@ -21,7 +21,7 @@ export const projects: Project[] = [
       "An interactive web application that simulates the behavior and growth patterns of slime molds.",
     tags: ["JavaScript"],
     url: "https://github.com/a96lex/physarum-simulation",
-    image: "/public/slime-mold.png",
+    image: "/slime-mold.png",
   },
   {
     name: "CoronaTiquets",
@@ -29,7 +29,7 @@ export const projects: Project[] = [
       "A platform for managing appointments to ensure the continuity of small business during the COVID-19 pandemic.",
     tags: ["Angular Native"],
     url: "https://upcoders.eebe.upc.edu/coronatiquets.html",
-    image: "/public/coronatiquets.png",
+    image: "/coronatiquets.png",
   },
   {
     name: "HotReach",
@@ -37,7 +37,7 @@ export const projects: Project[] = [
       "An AI-powered system for generating cold outreach messages based on prospect data, streamlining sales processes.",
     tags: ["Serverless", "BeautifulSoup4"],
     url: "https://hotreach.io/",
-    image: "/public/hotreach.png",
+    image: "/hotreach.png",
   },
   {
     name: "Aras",
@@ -45,7 +45,7 @@ export const projects: Project[] = [
       "A client appointment management system created for a family business, optimizing scheduling and customer interactions.",
     tags: ["FastAPI", "React"],
     url: "https://aras.netlify.app/",
-    image: "/public/aras.png",
+    image: "/aras.png",
   },
   {
     name: "Tank game",
@@ -53,7 +53,7 @@ export const projects: Project[] = [
       "A browser-based aim-and-shoot game inspired by diep.io, built using Python, pygame, and pyodide for browser compatibility.",
     tags: ["Pygame", "Pyodide", "Pygbag"],
     url: "https://alex-pf.itch.io/tank-game",
-    image: "/public/tank-game.png",
+    image: "/tank-game.png",
   },
   {
     name: "Rocket game",
@@ -61,7 +61,7 @@ export const projects: Project[] = [
       "A physics-based, Flappy Bird-inspired game where players navigate a rocket through obstacles, aiming for high scores.",
     tags: ["Pygame"],
     url: "https://github.com/a96lex/pygame-floating-rocket",
-    image: "/public/rocket.png",
+    image: "/rocket.png",
   },
   {
     name: "Loora",
@@ -69,7 +69,7 @@ export const projects: Project[] = [
       "A home safety device that uses Long Range technology to monitor the activity of loved ones, ensuring their well-being.",
     tags: ["Arduino", "Flask"],
     url: "https://devpost.com/software/loora",
-    image: "/public/loora.png",
+    image: "/loora.png",
   },
   {
     name: "Dono",
@@ -77,7 +77,7 @@ export const projects: Project[] = [
       "A charitable gift card platform where I contributed to data collection efforts.",
     tags: ["BeautifulSoup4"],
     url: "https://devpost.com/software/dono-4e563v",
-    image: "/public/dono.png",
+    image: "/dono.png",
   },
   {
     name: "Wordle breaker",
@@ -85,6 +85,6 @@ export const projects: Project[] = [
       "A command-line tool designed to help users solve Wordle puzzles efficiently by providing hints and solutions.",
     tags: ["Python"],
     url: "https://github.com/a96lex/wordle-breaker/",
-    image: "/public/wordle.png",
+    image: "/wordle.png",
   },
 ];
