@@ -11,7 +11,11 @@
     if (url.match(/devpost\.com/)) {
       return {
         src: "https://devpost.com/favicon.ico",
-        invertOnDarkMode: false,
+      };
+    }
+    if (url.match(/itch\.io/)) {
+      return {
+        src: "https://itch.io/favicon.ico",
       };
     }
   };
