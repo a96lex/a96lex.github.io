@@ -2,23 +2,41 @@
   import { onMount } from "svelte";
 
   let gradientStyle = "";
+  let opacity = "opacity-0";
 
-  const updateGradient = (event: MouseEvent) => {
-    const x = event.clientX;
-    const y = event.clientY;
+  const updateGradient = (x: number, y: number) => {
+    opacity = "opacity-20";
     gradientStyle = `background: radial-gradient(500px at ${x}px ${y}px, currentColor, transparent 70%)`;
   };
 
+  const removeBg = () => {
+    opacity = "opacity-0";
+  };
+
   onMount(() => {
-    window.addEventListener("mousemove", updateGradient);
+    const handleMouseMove = (event: MouseEvent) => {
+      updateGradient(event.clientX, event.clientY);
+    };
+
+    const handleTouchMove = (event: TouchEvent) => {
+      if (event.touches.length > 0) {
+        updateGradient(event.touches[0].clientX, event.touches[0].clientY);
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchmove", handleTouchMove);
+    window.addEventListener("touchend", removeBg);
 
     return () => {
-      window.removeEventListener("mousemove", updateGradient);
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("touchend", removeBg);
     };
   });
 </script>
 
 <div
-  class="pointer-events-none fixed inset-0 text-red-400 dark:text-blue-600 opacity-15 z-0"
+  class={`fixed inset-0 text-red-400 dark:text-blue-600 ${opacity} z-0`}
   style={gradientStyle}
 ></div>
