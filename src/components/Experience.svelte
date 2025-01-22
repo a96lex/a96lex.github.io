@@ -35,7 +35,7 @@
         <div class="mt-4">
           {#each experience.tags as tag}
             <span
-              class="inline-block py-1 px-3 text-sm font-medium bg-gray-200 dark:bg-gray-700 rounded-md text-gray-700 dark:text-gray-300 m-1 hover:bg-gray-300 dark:hover:bg-gray-600 transition-all"
+              class="inline-block py-1 px-3 text-sm font-medium bg-gray-200 dark:bg-gray-700 rounded-md text-gray-700 dark:text-gray-300 m-1"
             >
               {tag}
             </span>
