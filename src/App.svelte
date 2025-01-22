@@ -4,6 +4,7 @@
   import About from "./components/About.svelte";
   import Title from "./components/Title.svelte";
   import Projects from "./components/Projects.svelte";
+  import Experience from "./components/Experience.svelte";
   import Contact from "./components/Contact.svelte";
 </script>
 
@@ -22,6 +23,7 @@
     <Title />
     <About />
     <Projects />
+    <Experience />
     <Contact />
   </div>
 </main>
