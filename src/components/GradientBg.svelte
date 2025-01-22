@@ -37,6 +37,6 @@
 </script>
 
 <div
-  class={`fixed inset-0 text-red-400 dark:text-blue-600 ${opacity} z-0`}
+  class={`fixed inset-0 text-orange-400 dark:text-blue-600 ${opacity} z-0`}
   style={gradientStyle}
 ></div>
