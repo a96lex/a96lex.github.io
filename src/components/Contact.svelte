@@ -10,7 +10,6 @@
     </a>
     <a
       href="mailto:a96lex@gmail.com"
-      target="_blank"
       class="flex items-center space-x-2 hover:opacity-75 grayscale"
     >
       <img src="gmail.png" alt="Gmail" class="w-8 h-6" />
