@@ -15,13 +15,25 @@
       <div
         class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-xl"
       >
-        <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-          {experience.title}
-          <span class="font-normal text-gray-700 dark:text-gray-300">at</span>
-          <span class="font-medium text-gray-700 dark:text-gray-300"
-            >{experience.company}</span
-          >
-        </h3>
+        <div class="flex justify-between items-center">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+            {experience.title}
+            <span class="font-normal text-gray-700 dark:text-gray-300">at</span>
+            <span class="font-medium text-gray-700 dark:text-gray-300"
+              >{experience.company}</span
+            >
+          </h3>
+          {#if experience.url}
+            <a
+              href={experience.url}
+              aria-label={`${experience.company} website`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>🔗</span>
+            </a>
+          {/if}
+        </div>
         <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
           {experience.from} - {experience.to}
         </p>

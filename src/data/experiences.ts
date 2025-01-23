@@ -31,6 +31,7 @@ export const experiences: Experience[] = [
     ],
     from: "May 2024",
     to: "Nov 2024",
+    url: "https://lambdaloopers.com/",
   },
   {
     title: "Software Engineer",
@@ -56,6 +57,7 @@ export const experiences: Experience[] = [
     ],
     from: "Sep 2021",
     to: "Dec 2023",
+    url: "https://www.unith.ai/",
   },
   {
     title: "Software Engineer",
@@ -67,5 +69,6 @@ export const experiences: Experience[] = [
     tags: ["Python", "Serverless", "React", "React Native"],
     from: "Aug 2020",
     to: "Sep 2021",
+    url: "https://audiostack.ai/",
   },
 ];

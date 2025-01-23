@@ -74,8 +74,8 @@ export const projects: Project[] = [
   {
     name: "Dono",
     description:
-      "A charitable gift card platform where I contributed to data collection efforts.",
-    tags: ["BeautifulSoup4"],
+      "A charitable gift card platform where I contributed to data collection efforts and web development.",
+    tags: ["BeautifulSoup4", "Vue.js"],
     url: "https://devpost.com/software/dono-4e563v",
     image: "/dono.png",
   },
