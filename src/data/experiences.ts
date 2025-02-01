@@ -24,6 +24,7 @@ export const experiences: Experience[] = [
       "Langchain",
       "FastAPI",
       "React",
+      "Laravel",
       "Filament",
       "NestJs",
       "Docker",
