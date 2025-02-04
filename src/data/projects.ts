@@ -8,6 +8,22 @@ interface Project {
 
 export const projects: Project[] = [
   {
+    name: "Beagile",
+    description:
+      "A platform for accessing different LLMs to help traditional business adopt this new technology.",
+    tags: ["Next.js", "Tailwind CSS", "Shadcn/UI"],
+    url: "https://beagile.app/",
+    image: "/beagile.png",
+  },
+  {
+    name: "Portfolio",
+    description:
+      "A portfolio site to showcase my projects and skills. This is the site you are seeing right now.",
+    tags: ["Svelte", "TypeScript", "Tailwind CSS"],
+    url: "https://github.com/a96lex/a96lex.github.io",
+    image: "/portfolio.png",
+  },
+  {
     name: "Better",
     description:
       "A habit tracking app designed to help users reduce substance abuse by building healthier routines.",
