@@ -71,7 +71,7 @@
           <div class="px-4 pb-2">
             {#each project.tags as tag}
               <span
-                class={`p-2 bg-gray-300 dark:bg-gray-700 m-1 rounded-md backdrop-blur-sm ${
+                class={`p-2 bg-gray-300 dark:bg-gray-700 m-1 rounded-md backdrop-blur-sm whitespace-nowrap ${
                   project.image && "bg-opacity-50 dark:bg-opacity-50"
                 }`}
               >
