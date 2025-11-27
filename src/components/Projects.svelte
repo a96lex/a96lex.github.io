@@ -1,5 +1,9 @@
 <script lang="ts">
   import { projects } from "../data/projects.js";
+  import { onMount, onDestroy } from "svelte";
+
+  let activeProjectIndex = -1;
+  let projectElements: HTMLElement[] = [];
 
   const getUrlIcon = (url: string) => {
     if (url.match(/github\.com/)) {
@@ -19,6 +23,36 @@
       };
     }
   };
+
+  const checkCenteredProject = () => {
+    const viewportCenter = window.innerHeight / 2;
+    let closestIndex = -1;
+    let closestDistance = Infinity;
+
+    projectElements.forEach((el, index) => {
+      if (!el) return;
+      const elementCenter = el.getBoundingClientRect().top + el.offsetHeight / 2;
+      const distance = Math.abs(elementCenter - viewportCenter);
+      if (distance < closestDistance && distance < window.innerHeight / 3) {
+        closestDistance = distance;
+        closestIndex = index;
+      }
+    });
+    activeProjectIndex = closestIndex;
+  };
+
+  onMount(() => {
+    if (window.innerWidth < 1024) {
+      checkCenteredProject();
+      window.addEventListener("scroll", checkCenteredProject);
+      window.addEventListener("resize", checkCenteredProject);
+    }
+  });
+
+  onDestroy(() => {
+    window.removeEventListener("scroll", checkCenteredProject);
+    window.removeEventListener("resize", checkCenteredProject);
+  });
 </script>
 
 <div class="w-full">
@@ -26,16 +60,18 @@
   <p class="mb-4">Here is a sample of what I have done in the past years.</p>
 
   <div class="flex flex-row flex-wrap justify-between">
-    {#each projects as project}
+    {#each projects as project, i}
       <div
-        class={`z-40 transition-all duration-300 mb-4 rounded-lg text-gray-800 dark:text-gray-200 w-full pb-2 lg:w-[calc(50%-0.5em)] relative group`}
-      >
+        bind:this={projectElements[i]}
+        class="z-40 transition-all duration-300 mb-4 rounded-lg text-gray-800 dark:text-gray-200 w-full pb-2 lg:w-[calc(50%-0.5em)] relative group"
+      > 
         {#if project.image}
           <div
             class="absolute rounded-lg inset-0 bg-gray-100 dark:bg-gray-800 opacity-100"
           ></div>
           <div
             class="absolute rounded-lg inset-0 bg-cover bg-center opacity-10 group-hover:opacity-50"
+            class:!opacity-50={activeProjectIndex === i}
             style={`background-image: url('${project.image}');`}
           ></div>
         {/if}
@@ -50,6 +86,7 @@
               {@const icon = getUrlIcon(project.url)}
               <a
                 class="opacity-10 group-hover:opacity-100"
+                class:!opacity-100={activeProjectIndex === i}
                 href={project.url}
                 aria-label="project url"
                 target="_blank"
