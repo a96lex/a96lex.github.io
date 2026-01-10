@@ -1,20 +1,56 @@
-interface Project {
+export interface Project {
   name: string;
   description: string;
   tags: string[];
-  url?: string;
-  image?: string;
+  url: string;
+  image: string;
 }
 
-export const projects: Project[] = [
+export const client: Project[] = [
+  {
+    name: "Stuveo",
+    description:
+      "Academic orientation platform for Spanish schools. Worked on access management, UX/UI design, and data scraping for academic programs.",
+    tags: ["Next.js", "BeautifulSoup4"],
+    url: "https://www.stuveo.com/",
+    image: "/stuveo.png",
+  },
+  {
+    name: "Axiomatic",
+    description:
+      "AI startup. Developed an AI powered VScode extension to assist in photonics integrated circuit designs. Helped develop a web version as well.",
+    tags: ["Next.js", "Preact", "FastAPI"],
+    url: "https://www.axiomatic-ai.com/",
+    image: "/axiomatic.png",
+  },
+  {
+    name: "Signdit",
+    description:
+      "A platform for generating legal documents. Worked on the admin panel and team/access management.",
+    tags: ["Vue.js", "Laravel", "Filament"],
+    url: "https://signdit.com",
+    image: "/signdit.png",
+  },
+
   {
     name: "Beagile",
     description:
-      "A platform for accessing different LLMs to help traditional business adopt this new technology.",
+      "Designed and developed platform for accessing different LLMs to help traditional business adopt this new technology.",
     tags: ["Next.js", "Tailwind CSS", "Shadcn/UI"],
     url: "https://beagile.app/",
     image: "/beagile.png",
   },
+  {
+    name: "Robotix C360",
+    description:
+      "An internal platform to classify lego pieces for stock management. Inference optimization for segmentation+image recognition pipeline (5x speedup). Developed admin panel too.",
+    tags: ["PyTorch", "Laravel", "Kubernetes"],
+    url: "https://www.robotix.es/es/robotixc360/",
+    image: "/robotix.png",
+  },
+];
+
+export const personal: Project[] = [
   {
     name: "Portfolio",
     description:

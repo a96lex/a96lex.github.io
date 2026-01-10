@@ -12,30 +12,6 @@ interface Experience {
 export const experiences: Experience[] = [
   {
     title: "Software Engineer",
-    company: "LambdaLoopers",
-    bulletpoints: [
-      "Refactored and improved the microservices architecture, enhancing code quality through CI/CD pipelines, testing, and documentation.",
-      "Increased image segmentation pipeline efficiency by 5x through algorithm optimization and resource tuning.",
-      "Designed and deployed a new microservice, seamlessly integrating it into the existing microservice architecture and ensuring smooth interaction with external systems.",
-    ],
-    tags: [
-      "Python",
-      "PyTorch",
-      "Langchain",
-      "FastAPI",
-      "React",
-      "Laravel",
-      "Filament",
-      "NestJs",
-      "Docker",
-      "Kubernetes",
-    ],
-    from: "May 2024",
-    to: "Nov 2024",
-    url: "https://lambdaloopers.com/",
-  },
-  {
-    title: "Software Engineer",
     company: "Unith Research Labs",
     bulletpoints: [
       "Implemented a research-backed proof of concept into a production-ready REST API, serving as a core company product.",

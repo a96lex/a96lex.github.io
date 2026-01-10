@@ -6,6 +6,7 @@
   import Projects from "./components/Projects.svelte";
   import Experience from "./components/Experience.svelte";
   import Contact from "./components/Contact.svelte";
+  import { personal, client } from "./data/projects.js";
 </script>
 
 <main class="min-h-screen bg-gray-100 dark:bg-gray-800 pb-12 relative">
@@ -22,7 +23,16 @@
   >
     <Title />
     <About />
-    <Projects />
+    <Projects
+      projects={client}
+      title="Client projects"
+      description="Since I became a freelancer, I have worked for several companies. Here is a representative sample."
+    />
+    <Projects
+      projects={personal}
+      title="Personal projects"
+      description="Here is a sample of personal projects that I have developed in the past years."
+    />
     <Experience />
     <Contact />
   </div>

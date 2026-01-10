@@ -1,5 +1,9 @@
 <script lang="ts">
-  import { projects } from "../data/projects.js";
+  import type { Project } from "../data/projects.js";
+
+  export let projects: Project[];
+  export let title: string;
+  export let description: string;
 
   const getUrlIcon = (url: string) => {
     if (url.match(/github\.com/)) {
@@ -22,50 +26,52 @@
 </script>
 
 <div class="w-full">
-  <h2>Projects</h2>
-  <p class="mb-4">Here is a sample of what I have done in the past years.</p>
+  <h2>{title}</h2>
+  <p class="mb-4">
+    {description}
+  </p>
 
-  <div class="flex flex-row flex-wrap justify-between">
-    {#each projects as project}
+  <div class="flex flex-col gap-4">
+    {#each projects as project, index}
+      {@const icon = getUrlIcon(project.url)}
       <div
-        class={`z-40 transition-all duration-300 mb-4 rounded-lg text-gray-800 dark:text-gray-200 w-full pb-2 lg:w-[calc(50%-0.5em)] relative group`}
+        class={`transition-all duration-300 text-gray-800 dark:text-gray-200 w-full relative group flex flex-col lg:flex-row gap-4 ${
+          index % 2 === 1 ? "lg:flex-row-reverse" : ""
+        }`}
       >
-        {#if project.image}
-          <div
-            class="absolute rounded-lg inset-0 bg-gray-100 dark:bg-gray-800 opacity-100"
-          ></div>
-          <div
-            class="absolute rounded-lg inset-0 bg-cover bg-center opacity-10 group-hover:opacity-50"
-            style={`background-image: url('${project.image}');`}
-          ></div>
-        {/if}
-        <div class="relative">
+        <img
+          class="rounded-md w-full lg:w-2/5 h-60 object-cover border border-gray-200 dark:border-gray-700"
+          alt={project.name}
+          src={project.image}
+        />
+        <div class="relative flex-1 w-full lg:w-3/5">
           <h3
-            class={`text-lg font-bold bg-gray-300 dark:bg-gray-700 rounded-t-lg px-6 py-2 flex justify-between items-center ${
+            class={`text-lg font-bold  px-6 py-2 flex justify-between items-center ${
               project.image && "bg-opacity-50 dark:bg-opacity-50"
             } backdrop-blur-sm`}
           >
             <span>{project.name}</span>
-            {#if project.url}
-              {@const icon = getUrlIcon(project.url)}
-              <a
-                class="opacity-10 group-hover:opacity-100"
-                href={project.url}
-                aria-label="project url"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {#if icon}
-                  <img
-                    src={icon.src}
-                    alt="URL Icon"
-                    class={`h-5 w-5  ${icon.invertOnDarkMode && "dark:invert"}`}
-                  />
-                {:else}
-                  <span>🔗</span>
-                {/if}
-              </a>
-            {/if}
+            <a
+              class="bg-gray-300 dark:bg-gray-700 px-10 py-1 rounded-lg"
+              href={project.url}
+              aria-label="project url"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {#if icon}
+                <img
+                  src={icon.src}
+                  alt="URL Icon"
+                  class={`h-5 w-5  ${icon.invertOnDarkMode && "dark:invert"}`}
+                />
+              {:else}
+                <img
+                  src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><text y='16' font-size='16'>🔗</text></svg>"
+                  alt="Link"
+                  class="h-5 w-5"
+                />
+              {/if}
+            </a>
           </h3>
           <p class="px-6 mt-3 mb-6">{project.description}</p>
           <div class="px-4 pb-2">

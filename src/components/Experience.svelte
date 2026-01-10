@@ -7,7 +7,8 @@
     Experience
   </h2>
   <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
-    Summary of my employment history
+    Before becoming a freelancer, i have worked in several companies. Here is
+    the summary of my employment history
   </p>
 
   <div class="flex flex-col space-y-6">
