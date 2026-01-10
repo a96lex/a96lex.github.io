@@ -31,7 +31,7 @@
     {description}
   </p>
 
-  <div class="flex flex-col gap-4">
+  <div class="flex flex-col gap-16 lg:gap-4">
     {#each projects as project, index}
       {@const icon = getUrlIcon(project.url)}
       <div
@@ -46,7 +46,7 @@
         />
         <div class="relative flex-1 w-full lg:w-3/5">
           <h3
-            class={`text-lg font-bold  px-6 py-2 flex justify-between items-center ${
+            class={`text-lg font-bold py-2 px-2 lg:px-6 flex justify-between items-center ${
               project.image && "bg-opacity-50 dark:bg-opacity-50"
             } backdrop-blur-sm`}
           >
@@ -73,8 +73,8 @@
               {/if}
             </a>
           </h3>
-          <p class="px-6 mt-3 mb-6">{project.description}</p>
-          <div class="px-4 pb-2">
+          <p class="mt-3 mb-6 px-2 lg:px-6">{project.description}</p>
+          <div class="lg:px-4 pb-2">
             {#each project.tags as tag}
               <span
                 class={`p-2 bg-gray-300 dark:bg-gray-700 m-1 rounded-md backdrop-blur-sm whitespace-nowrap ${
