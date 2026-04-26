@@ -13,13 +13,13 @@ npm run build
 # update version
 
 ```
-npm run minor
+npm version minor
 ```
 
 or
 
 ```
-npm run patch
+npm version patch
 ```
 
 # deploy
