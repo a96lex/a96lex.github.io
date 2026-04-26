@@ -34,6 +34,9 @@
   <div class="flex flex-col gap-16 lg:gap-4">
     {#each projects as project, index}
       {@const icon = getUrlIcon(project.url)}
+      {#if index > 0}
+        <hr class="border-1.5 border-gray-200 dark:border-gray-700" />
+      {/if}
       <div
         class={`transition-all duration-300 text-gray-800 dark:text-gray-200 w-full relative group flex flex-col lg:flex-row gap-4 ${
           index % 2 === 1 ? "lg:flex-row-reverse" : ""
