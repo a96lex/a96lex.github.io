@@ -9,7 +9,7 @@
       <img src="linkedin.png" alt="LinkedIn" class="w-6 h-6" />
     </a>
     <a
-      href="mailto:info@alexcode.dev"
+      href="mailto:a96lex@gmail.com"
       class="flex items-center space-x-2 hover:opacity-75 dark:invert"
     >
       <img src="mail.svg" alt="Email" class="w-8 h-8" />
