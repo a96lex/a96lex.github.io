@@ -4,6 +4,7 @@ export interface Project {
   tags: string[];
   url: string;
   image: string;
+  selfReferencial?: boolean;
 }
 
 export const client: Project[] = [
@@ -58,6 +59,7 @@ export const personal: Project[] = [
     tags: ["Svelte", "TypeScript", "Tailwind CSS"],
     url: "https://github.com/a96lex/a96lex.github.io",
     image: "/portfolio.png",
+    selfReferencial: true,
   },
   {
     name: "Better",

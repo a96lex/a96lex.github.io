@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { Project } from "../data/projects.js";
+  import LivePreview from "./LivePreview.svelte";
 
   export let projects: Project[];
   export let title: string;
@@ -42,11 +43,21 @@
           index % 2 === 1 ? "lg:flex-row-reverse" : ""
         }`}
       >
-        <img
-          class="rounded-md w-full lg:w-2/5 h-60 object-cover border border-gray-200 dark:border-gray-700"
-          alt={project.name}
-          src={project.image}
-        />
+        {#if project.selfReferencial}
+          <LivePreview>
+            <img
+              class="rounded-md w-full lg:w-2/5 h-60 object-cover border border-gray-200 dark:border-gray-700"
+              alt={project.name}
+              src={project.image}
+            />
+          </LivePreview>
+        {:else}
+          <img
+            class="rounded-md w-full lg:w-2/5 h-60 object-cover border border-gray-200 dark:border-gray-700"
+            alt={project.name}
+            src={project.image}
+          />
+        {/if}
         <div class="relative flex-1 w-full lg:w-3/5">
           <h3
             class={`text-lg font-bold py-2 px-2 lg:px-6 flex justify-between items-center ${
