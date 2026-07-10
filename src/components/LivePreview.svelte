@@ -29,17 +29,6 @@
 
     const syncScroll = () =>
       iframeEl?.contentWindow?.scrollTo(0, window.scrollY);
-    const syncTheme = () =>
-      iframeEl?.contentWindow?.document.documentElement.classList.toggle(
-        "dark",
-        document.documentElement.classList.contains("dark")
-      );
-
-    const mo = new MutationObserver(syncTheme);
-    mo.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
 
     const forwardMouse = (e: MouseEvent) => {
       iframeEl?.contentWindow?.dispatchEvent(
@@ -51,17 +40,13 @@
       );
     };
 
-    iframeEl?.addEventListener("load", () => {
-      syncScroll();
-      syncTheme();
-    });
+    iframeEl?.addEventListener("load", syncScroll);
 
     window.addEventListener("scroll", syncScroll, { passive: true });
     window.addEventListener("mousemove", forwardMouse);
 
     return () => {
       ro.disconnect();
-      mo.disconnect();
       window.removeEventListener("scroll", syncScroll);
       window.removeEventListener("mousemove", forwardMouse);
     };

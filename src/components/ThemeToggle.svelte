@@ -1,18 +1,16 @@
 <script>
-  let isDarkMode =
-    localStorage.darkMode === "true" ||
-    (!("theme" in localStorage) &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches);
+  let isDarkMode = localStorage.darkMode
+    ? localStorage.darkMode === "true"
+    : matchMedia("(prefers-color-scheme: dark)").matches;
 
-  isDarkMode
-    ? document.documentElement.classList.add("dark")
-    : document.documentElement.classList.remove("dark");
+  $: ((localStorage.darkMode = isDarkMode),
+    document.documentElement.classList.toggle("dark", isDarkMode));
 
-  function toggleTheme() {
-    isDarkMode = !isDarkMode;
-    localStorage.darkMode = isDarkMode;
-    document.documentElement.classList.toggle("dark");
-  }
+  addEventListener(
+    "storage",
+    (e) => e.key === "darkMode" && (isDarkMode = e.newValue === "true")
+  );
+  const toggleTheme = () => (isDarkMode = !isDarkMode);
 </script>
 
 <button
