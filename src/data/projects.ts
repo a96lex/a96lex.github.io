@@ -53,6 +53,14 @@ export const client: Project[] = [
 
 export const personal: Project[] = [
   {
+    name: "Ferment",
+    description:
+      "A visual fermenting guide with step-by-step recipes for kombucha, beer, cider, kimchi and more, including times, temperatures and quantities.",
+    tags: ["Svelte", "TypeScript"],
+    url: "https://recipe.a96lex.com",
+    image: "/recipe.png",
+  },
+  {
     name: "Portfolio",
     description:
       "A portfolio site to showcase my projects and skills. This is the site you are seeing right now.",
