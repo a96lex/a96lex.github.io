@@ -4,52 +4,11 @@ export interface Project {
   tags: string[];
   url: string;
   image: string;
+  imageDark?: string;
   selfReferencial?: boolean;
+  featured?: boolean;
+  imageFit?: "cover" | "contain";
 }
-
-export const client: Project[] = [
-  {
-    name: "Stuveo",
-    description:
-      "Academic orientation platform for Spanish schools. Worked on access management, UX/UI design, and data scraping for academic programs.",
-    tags: ["Next.js", "BeautifulSoup4"],
-    url: "https://www.stuveo.com/",
-    image: "/stuveo.png",
-  },
-  {
-    name: "Axiomatic",
-    description:
-      "AI startup. Developed an AI powered VScode extension to assist in photonics integrated circuit designs. Helped develop a web version as well.",
-    tags: ["Next.js", "Preact", "FastAPI"],
-    url: "https://www.axiomatic-ai.com/",
-    image: "/axiomatic.png",
-  },
-  {
-    name: "Signdit",
-    description:
-      "A platform for generating legal documents. Worked on the admin panel and team/access management.",
-    tags: ["Vue.js", "Laravel", "Filament"],
-    url: "https://signdit.com",
-    image: "/signdit.png",
-  },
-
-  {
-    name: "Beagile",
-    description:
-      "Designed and developed platform for accessing different LLMs to help traditional business adopt this new technology.",
-    tags: ["Next.js", "Tailwind CSS", "Shadcn/UI"],
-    url: "https://beagile.app/",
-    image: "/beagile.png",
-  },
-  {
-    name: "Robotix C360",
-    description:
-      "An internal platform to classify lego pieces for stock management. Inference optimization for segmentation+image recognition pipeline (5x speedup). Developed admin panel too.",
-    tags: ["PyTorch", "Laravel", "Kubernetes"],
-    url: "https://www.robotix.es/es/robotixc360/",
-    image: "/robotix.png",
-  },
-];
 
 export const personal: Project[] = [
   {
@@ -59,6 +18,7 @@ export const personal: Project[] = [
     tags: ["Svelte", "TypeScript"],
     url: "https://recipe.a96lex.com",
     image: "/recipe.png",
+    featured: true,
   },
   {
     name: "Portfolio",
@@ -66,8 +26,10 @@ export const personal: Project[] = [
       "A portfolio site to showcase my projects and skills. This is the site you are seeing right now.",
     tags: ["Svelte", "TypeScript", "Tailwind CSS"],
     url: "https://github.com/a96lex/a96lex.github.io",
-    image: "/portfolio.png",
+    image: "/portfolio-light.png",
+    imageDark: "/portfolio-dark.png",
     selfReferencial: true,
+    featured: true,
   },
   {
     name: "Better",
@@ -76,6 +38,7 @@ export const personal: Project[] = [
     tags: ["Flutter"],
     url: "https://github.com/a96lex/better",
     image: "/better.png",
+    featured: true,
   },
   {
     name: "Slime mold simulator",
@@ -84,6 +47,7 @@ export const personal: Project[] = [
     tags: ["JavaScript"],
     url: "https://github.com/a96lex/physarum-simulation",
     image: "/slime-mold.png",
+    featured: true,
   },
   {
     name: "CoronaTiquets",
@@ -100,6 +64,7 @@ export const personal: Project[] = [
     tags: ["Serverless", "BeautifulSoup4"],
     url: "https://hotreach.io/",
     image: "/hotreach.png",
+    imageFit: "contain",
   },
   {
     name: "Aras",

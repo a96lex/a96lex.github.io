@@ -1,17 +1,17 @@
 <script lang="ts">
   import ThemeToggle from "./components/ThemeToggle.svelte";
   import GradientBg from "./components/GradientBg.svelte";
+  import Hero from "./components/Hero.svelte";
   import About from "./components/About.svelte";
-  import Title from "./components/Title.svelte";
+  import Work from "./components/Work.svelte";
   import Projects from "./components/Projects.svelte";
   import Experience from "./components/Experience.svelte";
-  import Contact from "./components/Contact.svelte";
-  import { personal, client } from "./data/projects.js";
+  import Footer from "./components/Footer.svelte";
 </script>
 
-<main class="min-h-screen bg-gray-100 dark:bg-gray-800 pb-12 relative">
+<main class="relative min-h-screen bg-stone-50 pb-12 dark:bg-zinc-950">
   <div
-    class="flex justify-end items-center fixed top-0 md:top-4 md:right-4 right-0 w-full z-50 pointer-events-auto"
+    class="fixed right-0 top-0 z-50 flex w-full items-center justify-end md:right-4 md:top-4"
   >
     <ThemeToggle />
   </div>
@@ -19,21 +19,13 @@
   <GradientBg />
 
   <div
-    class="flex flex-col items-start gap-10 max-w-3xl lg:max-w-4xl mx-auto px-10 relative z-10 pt-20"
+    class="relative z-10 mx-auto flex max-w-4xl flex-col items-start gap-14 px-6 pt-20 md:px-10"
   >
-    <Title />
+    <Hero />
     <About />
-    <Projects
-      projects={client}
-      title="Client projects"
-      description="Since I became a freelancer, I have worked for several companies. Here is a representative sample."
-    />
-    <Projects
-      projects={personal}
-      title="Personal projects"
-      description="Here is a sample of personal projects that I have developed in the past years."
-    />
+    <Work />
+    <Projects />
     <Experience />
-    <Contact />
+    <Footer />
   </div>
 </main>

@@ -1,106 +1,59 @@
 <script lang="ts">
-  import type { Project } from "../data/projects.js";
-  import LivePreview from "./LivePreview.svelte";
+  import { personal } from "../data/projects.js";
+  import ArrowIcon from "./ArrowIcon.svelte";
+  import Card from "./Card.svelte";
+  import Chip from "./Chip.svelte";
+  import Section from "./Section.svelte";
 
-  export let projects: Project[];
-  export let title: string;
-  export let description: string;
-
-  const getUrlIcon = (url: string) => {
-    if (url.match(/github\.com/)) {
-      return {
-        src: "https://github.githubassets.com/favicons/favicon.svg",
-        invertOnDarkMode: true,
-      };
-    }
-    if (url.match(/devpost\.com/)) {
-      return {
-        src: "https://devpost.com/favicon.ico",
-      };
-    }
-    if (url.match(/itch\.io/)) {
-      return {
-        src: "https://itch.io/favicon.ico",
-      };
-    }
-  };
+  const featured = personal.filter((project) => project.featured);
+  const others = personal.filter((project) => !project.featured);
 </script>
 
-<div class="w-full">
-  <h2>{title}</h2>
-  <p class="mb-4">
-    {description}
-  </p>
-
-  <div class="flex flex-col gap-16 lg:gap-4">
-    {#each projects as project, index}
-      {@const icon = getUrlIcon(project.url)}
-      {#if index > 0}
-        <hr class="border-1.5 border-gray-200 dark:border-gray-700" />
-      {/if}
-      <div
-        class={`transition-all duration-300 text-gray-800 dark:text-gray-200 w-full relative group flex flex-col lg:flex-row gap-4 ${
-          index % 2 === 1 ? "lg:flex-row-reverse" : ""
-        }`}
-      >
-        {#if project.selfReferencial}
-          <LivePreview>
-            <img
-              class="rounded-md w-full lg:w-2/5 h-60 object-cover border border-gray-200 dark:border-gray-700"
-              alt={project.name}
-              src={project.image}
-            />
-          </LivePreview>
-        {:else}
-          <img
-            class="rounded-md w-full lg:w-2/5 h-60 object-cover border border-gray-200 dark:border-gray-700"
-            alt={project.name}
-            src={project.image}
-          />
-        {/if}
-        <div class="relative flex-1 w-full lg:w-3/5">
-          <h3
-            class={`text-lg font-bold py-2 px-2 lg:px-6 flex justify-between items-center ${
-              project.image && "bg-opacity-50 dark:bg-opacity-50"
-            } backdrop-blur-sm`}
-          >
-            <span>{project.name}</span>
-            <a
-              class="bg-gray-300 dark:bg-gray-700 px-10 py-1 rounded-lg"
-              href={project.url}
-              aria-label="project url"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {#if icon}
-                <img
-                  src={icon.src}
-                  alt="URL Icon"
-                  class={`h-5 w-5  ${icon.invertOnDarkMode && "dark:invert"}`}
-                />
-              {:else}
-                <img
-                  src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><text y='16' font-size='16'>🔗</text></svg>"
-                  alt="Link"
-                  class="h-5 w-5"
-                />
-              {/if}
-            </a>
-          </h3>
-          <p class="mt-3 mb-6 px-2 lg:px-6">{project.description}</p>
-          <div class="lg:px-4 pb-2">
-            {#each project.tags as tag}
-              <span
-                class={`p-2 bg-gray-300 dark:bg-gray-700 m-1 rounded-md backdrop-blur-sm whitespace-nowrap ${
-                  project.image && "bg-opacity-50 dark:bg-opacity-50"
-                }`}
-              >
-                {tag}
-              </span>
-            {/each}
-          </div>
-        </div>
-      </div>
+<Section
+  id="projects"
+  title="Personal projects"
+  description="Things I've built in my own time."
+>
+  <div class="grid gap-6 sm:grid-cols-2">
+    {#each featured as project}
+      <Card {...project} />
     {/each}
   </div>
-</div>
+
+  <h3 class="mb-2 mt-10 text-xl font-semibold">More projects</h3>
+  <ul class="divide-y divide-zinc-200 dark:divide-zinc-800">
+    {#each others as project}
+      <li>
+        <a
+          href={project.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group flex items-start gap-4 py-5"
+        >
+          <img
+            class={`h-14 w-20 shrink-0 rounded-md border border-zinc-200 dark:border-zinc-800 ${
+              project.imageFit === "contain"
+                ? "bg-white object-contain p-1"
+                : "object-cover"
+            }`}
+            alt=""
+            src={project.image}
+          />
+          <span class="flex flex-1 flex-col gap-2">
+            <span
+              class="font-display text-lg font-semibold text-zinc-900 group-hover:underline dark:text-zinc-50"
+              >{project.name}</span
+            >
+            <span>{project.description}</span>
+            <span class="flex flex-wrap gap-1.5">
+              {#each project.tags as tag}
+                <Chip label={tag} />
+              {/each}
+            </span>
+          </span>
+          <span class="hidden md:block"><ArrowIcon /></span>
+        </a>
+      </li>
+    {/each}
+  </ul>
+</Section>

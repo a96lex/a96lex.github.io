@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
 
-  const MAX_DEPTH = 6;
+  const MAX_DEPTH = 10;
   const nestingDepth =
     typeof window !== "undefined"
       ? Number(new URLSearchParams(window.location.search).get("depth")) || 0
@@ -18,9 +18,9 @@
     if (!showLivePreview || !iframeContainer) return;
 
     const update = () => {
-      iframeWidth = Math.max(window.innerWidth);
+      iframeWidth = window.innerWidth;
       iframeScale = iframeContainer.offsetWidth / iframeWidth;
-      iframeHeight = Math.round(240 / iframeScale);
+      iframeHeight = Math.round(iframeContainer.offsetHeight / iframeScale);
     };
     update();
 
@@ -56,7 +56,7 @@
 {#if showLivePreview}
   <div
     bind:this={iframeContainer}
-    class="rounded-md w-[65%] lg:w-2/5 h-60 overflow-hidden relative border border-gray-200 dark:border-gray-700 mx-auto lg:mx-0"
+    class="h-full w-full overflow-hidden relative"
   >
     <iframe
       bind:this={iframeEl}
