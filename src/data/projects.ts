@@ -36,7 +36,7 @@ export const personal: Project[] = [
     description:
       "A habit tracking app designed to help users reduce substance abuse by building healthier routines.",
     tags: ["Flutter"],
-    url: "https://github.com/a96lex/better",
+    url: "https://better.a96lex.com",
     image: "/better.png",
     featured: true,
   },
