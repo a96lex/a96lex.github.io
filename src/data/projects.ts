@@ -12,6 +12,16 @@ export interface Project {
 
 export const personal: Project[] = [
   {
+    name: "Four Ways",
+    description:
+      "A daily puzzle platformer: one new level every day and four abilities. Clear it once with each.",
+    tags: ["SvelteKit"],
+    url: "https://four-ways.a96lex.com",
+    image: "/four-ways.png",
+    imageDark: "/four-ways-dark.png",
+    featured: true,
+  },
+  {
     name: "Ferment",
     description:
       "A visual fermenting guide with step-by-step recipes for kombucha, beer, cider, kimchi and more, including times, temperatures and quantities.",
