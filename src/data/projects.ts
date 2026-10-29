@@ -12,6 +12,15 @@ export interface Project {
 
 export const personal: Project[] = [
   {
+    name: "Trueki",
+    description:
+      "A local marketplace to trade what you have for what you want, like fruit from your garden for someone else's.",
+    tags: ["Next.js"],
+    url: "https://trueki.app",
+    image: "/trueki.png",
+    featured: true,
+  },
+  {
     name: "Four Ways",
     description:
       "A daily puzzle platformer: one new level every day and four abilities. Clear it once with each.",
