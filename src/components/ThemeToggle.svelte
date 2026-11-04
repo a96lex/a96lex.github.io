@@ -3,14 +3,21 @@
     ? localStorage.darkMode === "true"
     : matchMedia("(prefers-color-scheme: dark)").matches;
 
-  $: ((localStorage.darkMode = isDarkMode),
-    document.documentElement.classList.toggle("dark", isDarkMode));
+  $: document.documentElement.classList.toggle("dark", isDarkMode);
 
+  // Only a click writes the theme. Other pages (tabs and the nested previews)
+  // just follow it; writing back here makes them echo each other in a loop.
   addEventListener(
     "storage",
-    (e) => e.key === "darkMode" && (isDarkMode = e.newValue === "true")
+    (e) =>
+      e.key === "darkMode" &&
+      e.newValue !== null &&
+      (isDarkMode = e.newValue === "true")
   );
-  const toggleTheme = () => (isDarkMode = !isDarkMode);
+  const toggleTheme = () => {
+    isDarkMode = !isDarkMode;
+    localStorage.darkMode = isDarkMode;
+  };
 </script>
 
 <button
