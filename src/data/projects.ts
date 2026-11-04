@@ -26,8 +26,8 @@ export const personal: Project[] = [
       "A daily puzzle platformer: one new level every day and four abilities. Clear it once with each.",
     tags: ["SvelteKit"],
     url: "https://quaddle.app",
-    image: "/four-ways.png",
-    imageDark: "/four-ways-dark.png",
+    image: "/quaddle.png",
+    imageDark: "/quaddle-dark.png",
     featured: true,
   },
   {
