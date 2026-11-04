@@ -21,11 +21,11 @@ export const personal: Project[] = [
     featured: true,
   },
   {
-    name: "Four Ways",
+    name: "Quaddle",
     description:
       "A daily puzzle platformer: one new level every day and four abilities. Clear it once with each.",
     tags: ["SvelteKit"],
-    url: "https://four-ways.a96lex.com",
+    url: "https://quaddle.app",
     image: "/four-ways.png",
     imageDark: "/four-ways-dark.png",
     featured: true,
