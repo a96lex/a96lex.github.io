@@ -20,7 +20,7 @@ export const current: Engagement[] = [
     description:
       "Academic orientation platform for Spanish schools. After a year building access management, UX/UI and data scraping for academic programs, I now lead the technology side as CTO.",
     tags: ["Next.js", "BeautifulSoup4"],
-    image: "/stuveo.png",
+    image: "/stuveo.webp",
     roles: [
       { title: "CTO", from: "Mar 2026" },
       { title: "Freelance developer", from: "Mar 2025", to: "Mar 2026" },
@@ -43,7 +43,7 @@ export const past: PastClient[] = [
       "AI startup. Built an AI-powered VS Code extension that assists with photonic integrated circuit design, and helped develop the web version.",
     tags: ["Next.js", "Preact", "FastAPI"],
     url: "https://www.axiomatic-ai.com/",
-    image: "/axiomatic.png",
+    image: "/axiomatic.webp",
   },
   {
     name: "Robotix C360",
@@ -51,7 +51,7 @@ export const past: PastClient[] = [
       "Internal platform that classifies lego pieces for stock management. Made the segmentation + recognition pipeline 5x faster and built the admin panel.",
     tags: ["PyTorch", "Laravel", "Kubernetes"],
     url: "https://www.robotix.es/es/robotixc360/",
-    image: "/robotix.png",
+    image: "/robotix.webp",
   },
   {
     name: "acceso",
@@ -59,7 +59,7 @@ export const past: PastClient[] = [
       "Media intelligence company. Building an AI chatbot extension for their Tableau app.",
     tags: ["React", "FastAPI"],
     url: "https://acceso.com/",
-    image: "/acceso.png",
+    image: "/acceso.webp",
   },
   {
     name: "Beagile",
@@ -67,6 +67,6 @@ export const past: PastClient[] = [
       "Designed and built a platform giving traditional businesses access to different LLMs.",
     tags: ["Next.js", "Tailwind CSS", "Shadcn/UI"],
     url: "https://beagile.app/",
-    image: "/beagile.png",
+    image: "/beagile.webp",
   },
 ];

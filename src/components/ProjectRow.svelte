@@ -8,6 +8,9 @@
   export let tags: string[] = [];
   export let image: string;
   export let imageFit: "cover" | "contain" = "cover";
+
+  // Rows show a 80px thumbnail; public/thumbs holds a 160x112 copy of each image.
+  $: thumb = image.replace(/^\/(.+)\.\w+$/, "/thumbs/$1.webp");
 </script>
 
 <li>
@@ -22,7 +25,9 @@
         imageFit === "contain" ? "bg-white object-contain p-1" : "object-cover"
       }`}
       alt=""
-      src={image}
+      src={thumb}
+      loading="lazy"
+      decoding="async"
     />
     <span class="flex flex-1 flex-col gap-2">
       <span

@@ -7,8 +7,20 @@
 </script>
 
 {#if srcDark}
-  <img class={`${imgClass} dark:hidden`} {alt} {src} />
-  <img class={`${imgClass} hidden dark:block`} {alt} src={srcDark} />
+  <img
+    class={`${imgClass} dark:hidden`}
+    {alt}
+    {src}
+    loading="lazy"
+    decoding="async"
+  />
+  <img
+    class={`${imgClass} hidden dark:block`}
+    {alt}
+    src={srcDark}
+    loading="lazy"
+    decoding="async"
+  />
 {:else}
-  <img class={imgClass} {alt} {src} />
+  <img class={imgClass} {alt} {src} loading="lazy" decoding="async" />
 {/if}

@@ -22,6 +22,8 @@
               class="absolute inset-0 h-full w-full object-cover object-left-top"
               alt={engagement.company}
               src={engagement.image}
+              loading="lazy"
+              decoding="async"
             />
           </div>
         {/if}
