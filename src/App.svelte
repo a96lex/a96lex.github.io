@@ -2,10 +2,9 @@
   import ThemeToggle from "./components/ThemeToggle.svelte";
   import GradientBg from "./components/GradientBg.svelte";
   import Hero from "./components/Hero.svelte";
-  import About from "./components/About.svelte";
   import Work from "./components/Work.svelte";
   import Projects from "./components/Projects.svelte";
-  import Experience from "./components/Experience.svelte";
+  import PreviousExperience from "./components/PreviousExperience.svelte";
   import Footer from "./components/Footer.svelte";
 </script>
 
@@ -22,10 +21,9 @@
     class="relative z-10 mx-auto flex max-w-4xl flex-col items-start gap-14 px-6 pt-20 md:px-10"
   >
     <Hero />
-    <About />
-    <Work />
     <Projects />
-    <Experience />
+    <Work />
+    <PreviousExperience />
     <Footer />
   </div>
 </main>

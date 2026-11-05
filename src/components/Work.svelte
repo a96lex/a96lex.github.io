@@ -1,7 +1,6 @@
 <script lang="ts">
-  import { current, past } from "../data/work.js";
+  import { current } from "../data/work.js";
   import ArrowIcon from "./ArrowIcon.svelte";
-  import Card from "./Card.svelte";
   import Chip from "./Chip.svelte";
   import Section from "./Section.svelte";
 </script>
@@ -50,18 +49,6 @@
           </div>
         </div>
       </a>
-    {/each}
-  </div>
-</Section>
-
-<Section
-  id="freelance"
-  title="Freelance work"
-  description="Some of the teams I've built things for."
->
-  <div class="grid gap-6 sm:grid-cols-2">
-    {#each past as client}
-      <Card {...client} />
     {/each}
   </div>
 </Section>

@@ -53,33 +53,30 @@ export const personal: Project[] = [
   {
     name: "Better",
     description:
-      "A habit tracking app designed to help users reduce substance abuse by building healthier routines.",
+      "A habit tracker that counts the days since you quit something.",
     tags: ["Flutter"],
     url: "https://better.a96lex.com",
     image: "/better.png",
-    featured: true,
   },
   {
     name: "Slime mold simulator",
     description:
-      "An interactive web application that simulates the behavior and growth patterns of slime molds.",
+      "Simulates how slime molds grow and form networks, in the browser.",
     tags: ["JavaScript"],
     url: "https://github.com/a96lex/physarum-simulation",
     image: "/slime-mold.png",
-    featured: true,
   },
   {
     name: "CoronaTiquets",
     description:
-      "A platform for managing appointments to ensure the continuity of small business during the COVID-19 pandemic.",
+      "Appointment booking that kept small shops open during COVID-19.",
     tags: ["Angular Native"],
     url: "https://upcoders.eebe.upc.edu/coronatiquets.html",
     image: "/coronatiquets.png",
   },
   {
     name: "HotReach",
-    description:
-      "An AI-powered system for generating cold outreach messages based on prospect data, streamlining sales processes.",
+    description: "Writes cold outreach messages from a prospect's public data.",
     tags: ["Serverless", "BeautifulSoup4"],
     url: "https://hotreach.io/",
     image: "/hotreach.png",
@@ -87,32 +84,28 @@ export const personal: Project[] = [
   },
   {
     name: "Aras",
-    description:
-      "A client appointment management system created for a family business, optimizing scheduling and customer interactions.",
+    description: "Appointment scheduling for a family business.",
     tags: ["FastAPI", "React"],
     url: "https://aras.netlify.app/",
     image: "/aras.png",
   },
   {
     name: "Tank game",
-    description:
-      "A browser-based aim-and-shoot game inspired by diep.io, built using Python, pygame, and pyodide for browser compatibility.",
+    description: "A diep.io-style shooter in Python, running in the browser.",
     tags: ["Pygame", "Pyodide", "Pygbag"],
     url: "https://alex-pf.itch.io/tank-game",
     image: "/tank-game.png",
   },
   {
     name: "Rocket game",
-    description:
-      "A physics-based, Flappy Bird-inspired game where players navigate a rocket through obstacles, aiming for high scores.",
+    description: "Flappy Bird with a rocket and real physics.",
     tags: ["Pygame"],
     url: "https://github.com/a96lex/pygame-floating-rocket",
     image: "/rocket.png",
   },
   {
     name: "Loora",
-    description:
-      "A home safety device that uses Long Range technology to monitor the activity of loved ones, ensuring their well-being.",
+    description: "A LoRa home device to check in on a loved one's activity.",
     tags: ["Arduino", "Flask"],
     url: "https://devpost.com/software/loora",
     image: "/loora.png",
@@ -120,15 +113,14 @@ export const personal: Project[] = [
   {
     name: "Dono",
     description:
-      "A charitable gift card platform where I contributed to data collection efforts and web development.",
+      "Charity gift cards. I worked on data collection and the web app.",
     tags: ["BeautifulSoup4", "Vue.js", "Laravel"],
     url: "https://devpost.com/software/dono-4e563v",
     image: "/dono.png",
   },
   {
     name: "Wordle breaker",
-    description:
-      "A command-line tool designed to help users solve Wordle puzzles efficiently by providing hints and solutions.",
+    description: "A command-line helper that suggests your next Wordle guess.",
     tags: ["Python"],
     url: "https://github.com/a96lex/wordle-breaker/",
     image: "/wordle.png",
